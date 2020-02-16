@@ -1,34 +1,90 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default function Employees() {
+
+    const [employee, setEmployee] = useState({
+        firstName: "",
+        lastName: "",
+        jobTitle: ""
+    });
+
+    const employees = [
+        {
+            firstName: "Michael",
+            lastName: "Scott",
+            jobTitle: "Scranton Branch Manager"
+          },
+          {
+            firstName: "Dwight",
+            lastName: "Schrute",
+            jobTitle: "Assistant to the Regional Manager"
+          },
+          {
+            firstName: "Jim",
+            lastName: "Halpert",
+            jobTitle: "Inside Sales Representative"
+          },
+          {
+            firstName: "Oscar",
+            lastName: "Martinez",
+            jobTitle: "Accountant"
+          },
+          {
+            firstName: "Pam",
+            lastName: "Beesly",
+            jobTitle: "Front Desk Receptionist"
+          }
+        ];
+
+    // useEffect(() => {
+    //     // For demonstration purposes, we mock an API call.
+    //     // getEmployee.then((res) => {
+    //     //   setDeveloperState(res);
+    //     //   console.log("Developer State:");
+    //     //   console.log(developerState);
+    //     });
+    //   }, []);
+
     return (
         <table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Job Title</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{employees[0].firstName}</td>
+      <td>{employees[0].lastName}</td>
+      <td>{employees[0].jobTitle}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>{employees[1].firstName}</td>
+      <td>{employees[1].lastName}</td>
+      <td>{employees[1].jobTitle}</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
+      <td>{employees[2].firstName}</td>
+      <td>{employees[2].lastName}</td>
+      <td>{employees[2].jobTitle}</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>{employees[3].firstName}</td>
+      <td>{employees[3].lastName}</td>
+      <td>{employees[3].jobTitle}</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>{employees[4].firstName}</td>
+      <td>{employees[4].lastName}</td>
+      <td>{employees[4].jobTitle}</td>
     </tr>
   </tbody>
 </table>
