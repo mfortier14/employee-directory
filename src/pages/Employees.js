@@ -46,6 +46,8 @@ export default function Employees() {
     //   }, []);
 
     return (
+        <div>
+
         <table class="table table-striped">
   <thead>
     <tr>
@@ -88,5 +90,10 @@ export default function Employees() {
     </tr>
   </tbody>
 </table>
+
+        <button className="firstName btn-primary">First Name</button>
+       <button className="lastName btn-success">Last Name</button>
+       <button className="jobTitle btn-danger">Job Title</button>
+</div>
     )
 }
