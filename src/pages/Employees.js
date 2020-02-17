@@ -5,8 +5,17 @@ export default function Employees() {
     const [employee, setEmployee] = useState({
         firstName: "",
         lastName: "",
-        jobTitle: ""
-    });
+        jobTitle: "",
+    }
+    );
+
+    // useEffect(() => {
+    //   employee.then((res) => {
+    //     setEmployee(res);
+    //     console.log(employee);
+    //   });
+    // });
+
 
     const employees = [
         {
@@ -36,16 +45,8 @@ export default function Employees() {
           }
         ];
 
-    // useEffect(() => {
-    //     // For demonstration purposes, we mock an API call.
-    //     // getEmployee.then((res) => {
-    //     //   setDeveloperState(res);
-    //     //   console.log("Developer State:");
-    //     //   console.log(developerState);
-    //     });
-    //   }, []);
 
-    return (
+      return (
         <div>
 
         <table class="table table-striped">
@@ -91,9 +92,11 @@ export default function Employees() {
   </tbody>
 </table>
 
+
+
         <button className="firstName btn-primary">First Name</button>
        <button className="lastName btn-success">Last Name</button>
        <button className="jobTitle btn-danger">Job Title</button>
 </div>
-    )
-}
+    )};
+
