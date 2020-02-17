@@ -100,3 +100,6 @@ export default function Employees() {
 </div>
     )};
 
+  //   this.setState(({tableData}) => ({
+  //     tableData: tableData.slice().sort((employees) => employees.firstName.localeCompare(employees.firstName))
+  // }));
